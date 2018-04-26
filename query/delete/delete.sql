@@ -1,0 +1,1 @@
+DELETE FROM foo2 WHERE id < 4;
