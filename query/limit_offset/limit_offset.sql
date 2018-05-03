@@ -1,0 +1,5 @@
+SELECT * FROM foo2 LIMIT 2;
+
+SELECT * FROM foo2 LIMIT 2 OFFSET 1;
+
+/* SELECT * FROM foo2 OFFSET 1;    error */
