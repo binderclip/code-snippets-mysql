@@ -34,3 +34,15 @@ CREATE TABLE foo4
 );
 INSERT INTO foo4 (d, e)
     VALUES (1, 11), (2, NULL), (3, 33), (4, NULL);
+
+
+CREATE TABLE foo5
+(
+    id INT(10) UNSIGNED NOT NULL auto_increment,
+    f INT(10) UNSIGNED,
+    g CHAR(20),
+    PRIMARY KEY (`id`)
+)
+INSERT INTO foo5 (f, g)
+    VALUES (11, 'abcdef'), (12, 'bcdefg'), (13, 'cdefgh'), (14, 'defghi')
+           (15, 'Abcdef'), (16, 'bbdefg'), (17, 'bdefgh');
