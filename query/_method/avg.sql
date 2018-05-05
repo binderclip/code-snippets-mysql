@@ -1,0 +1,1 @@
+SELECT AVG(f) FROM foo5;

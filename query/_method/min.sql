@@ -1,0 +1,1 @@
+SELECT MIN(f) FROM foo5;

@@ -1,0 +1,1 @@
+SELECT MAX(f) FROM foo5;

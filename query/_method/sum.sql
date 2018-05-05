@@ -1,0 +1,2 @@
+SELECT SUM(f) FROM foo5;
+SELECT SUM(k*v) FROM foo2;
