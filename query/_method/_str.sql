@@ -1,0 +1,1 @@
+SELECT id, UPPER(g) FROM foo5;
