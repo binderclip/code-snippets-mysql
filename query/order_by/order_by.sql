@@ -1,0 +1,9 @@
+SELECT * FROM foo3 ORDER BY c;
+
+SELECT * FROM foo3 ORDER BY b, c;
+
+SELECT * FROM foo3 ORDER BY b DESC, c;
+
+SELECT * FROM foo3 ORDER BY b DESC, c DESC;
+
+SELECT id, a, b FROM foo3 ORDER BY c, 3 DESC;
