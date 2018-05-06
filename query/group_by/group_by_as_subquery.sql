@@ -9,5 +9,6 @@ FROM
 WHERE
     bar_count > 1
 ORDER BY bar_count DESC;
-
 -- https://stackoverflow.com/a/27619065/3936457
+
+SELECT COUNT(*) AS bar_count, bar FROM foo GROUP BY bar HAVING bar_count > 1 ORDER BY bar_count DESC;
