@@ -10,12 +10,12 @@ WHERE
 UPDATE Customers SET cust_email = 'kim@thetoystore.com' WHERE cust_id = '1000000005';
 
 UPDATE Customers SET
-	cust_contact = 'Sam Roberts',
-	cust_email = 'sam@toyland.com'
+    cust_contact = 'Sam Roberts',
+    cust_email = 'sam@toyland.com'
 WHERE
-	cust_id = '1000000006';
+    cust_id = '1000000006';
 
 UPDATE Customers
-	SET cust_email = NULL
+    SET cust_email = NULL
 WHERE
-	cust_id = '1000000005';
+    cust_id = '1000000005';

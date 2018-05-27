@@ -15,4 +15,4 @@ ORDER BY bar_count DESC;
 SELECT COUNT(*) AS bar_count, bar FROM foo GROUP BY bar HAVING bar_count > 1 ORDER BY bar_count DESC;
 -- 分组取数量、过滤数量、再取总数
 SELECT COUNT(*) FROM
-	(SELECT COUNT(*) AS bar_count, bar FROM foo GROUP BY bar HAVING bar_count > 1 ORDER BY bar_count) AS s;
+    (SELECT COUNT(*) AS bar_count, bar FROM foo GROUP BY bar HAVING bar_count > 1 ORDER BY bar_count) AS s;
