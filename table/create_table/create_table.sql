@@ -42,9 +42,9 @@ CREATE TABLE foo5
     f INT(10) UNSIGNED,
     g CHAR(20),
     PRIMARY KEY (`id`)
-)
+);
 INSERT INTO foo5 (f, g)
-    VALUES (11, 'abcdef'), (12, 'bcdefg'), (13, 'cdefgh'), (14, 'defghi')
+    VALUES (11, 'abcdef'), (12, 'bcdefg'), (13, 'cdefgh'), (14, 'defghi'),
            (15, 'Abcdef'), (16, 'bbdefg'), (17, 'bdefgh');
 
 
@@ -53,7 +53,7 @@ CREATE TABLE foo6
     id INT(10) UNSIGNED NOT NULL auto_increment,
     dt DATETIME,
     PRIMARY KEY (`id`)
-)
+);
 INSERT INTO foo6 (dt)
     VALUES ('2018-05-05 00:00:00'), ('2018-05-25 00:00:00'),
            ('2018-05-01 00:00:00'), ('2018-01-05 00:00:00'),
