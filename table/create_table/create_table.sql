@@ -58,3 +58,17 @@ INSERT INTO foo6 (dt)
     VALUES ('2018-05-05 00:00:00'), ('2018-05-25 00:00:00'),
            ('2018-05-01 00:00:00'), ('2018-01-05 00:00:00'),
            ('2025-05-05 00:00:00');
+
+
+CREATE TABLE big_boss
+(
+    id INT(10) UNSIGNED NOT NULL auto_increment,
+    f FLOAT(3,2),
+    f2 FLOAT,
+    PRIMARY KEY (`id`)
+);
+INSERT INTO big_boss (f)
+    VALUES (1.1), (2.22);
+INSERT INTO big_boss (f2)
+    VALUES (1), (2.2), (3.33), (4.444), (5.5555), (6.66666), (7.777777), (8.8888888);
+-- 发现精度只有 6 位有效数字
