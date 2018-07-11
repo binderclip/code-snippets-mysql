@@ -12,3 +12,6 @@ SELECT id, a, b FROM foo3 ORDER BY c, 3 DESC;
 SELECT order_num, order_item FROM OrderItems ORDER BY order_item, order_num;
 -- 与上一条相反
 SELECT order_num, order_item FROM OrderItems ORDER BY order_num, order_item;
+
+-- foo4 的 e 列中含有 NULL 数据，排列的时候如果是正序排，会被排到前面，倒序排会被排到后面
+SELECT * FROM foo4 ORDER BY e;

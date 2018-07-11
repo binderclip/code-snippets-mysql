@@ -22,7 +22,9 @@ SELECT * FROM foo3 WHERE a is NOT NULL;
 
 SELECT * FROM foo4 WHERE e is NULL;
 SELECT * FROM foo4 WHERE e is NOT NULL;
+-- 值比较的时候不会出现 NULL 的值
 SELECT * FROM foo4 WHERE e < 100;
+SELECT * FROM foo4 WHERE e > 20;
 SELECT * FROM foo4 WHERE e != 100;
 
 SELECT * FROM foo4 WHERE id IN (1, 2);
