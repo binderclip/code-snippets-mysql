@@ -6,6 +6,7 @@ mysql -h hostname -u user database --protocol=tcp < path/to/test.sql
 
 ## tools
 
+- [mycli](https://www.mycli.net/)
 - [Instant SQL Formatter](http://www.dpriver.com/pp/sqlformat.htm)
 - GUI tool [Sequel Pro](https://www.sequelpro.com/)
 
