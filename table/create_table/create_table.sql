@@ -72,3 +72,11 @@ INSERT INTO big_boss (f)
 INSERT INTO big_boss (f2)
     VALUES (1), (2.2), (3.33), (4.444), (5.5555), (6.66666), (7.777777), (8.8888888);
 -- 发现精度只有 6 位有效数字
+
+CREATE TABLE foo7
+(
+    id INT(10) UNSIGNED NOT NULL auto_increment,
+    text CHAR(100) NOT NULL,
+    `_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `_updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+);

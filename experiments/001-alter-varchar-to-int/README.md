@@ -17,9 +17,9 @@ CREATE TABLE varchar_to_int
 INSERT INTO varchar_to_int(
     a
 ) VALUES (
-    "10",
+    "10"
 ), (
-    "11",
+    "11"
 );
 ```
 
