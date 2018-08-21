@@ -10,3 +10,7 @@ SELECT prod_name, vend_name, prod_price, quantity FROM OrderItems
     INNER JOIN Products ON OrderItems.prod_id=Products.prod_id
     INNER JOIN Vendors ON Products.vend_id=Vendors.vend_id
     WHERE order_num=20007;
+
+SELECT order_date, order_num, prod_id, prod_name FROM Orders
+    INNER JOIN OrderItems ON Orders.order_num=OrderItems.order_num
+    INNER JOIN Products ON OrderItems.prod_id=Products.prod_id;
