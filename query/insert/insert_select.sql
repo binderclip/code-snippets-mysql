@@ -18,3 +18,5 @@ INSERT INTO Customers2(
     cust_state,
     cust_zip,
     cust_country FROM Customers;
+
+-- https://stackoverflow.com/questions/25969/insert-into-values-select-from/26080#26080
