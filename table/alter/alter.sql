@@ -6,3 +6,4 @@ ALTER TABLE Vendors DROP COLUMN vend_phone;
 -- index
 ALTER TABLE Customers ADD PRIMARY KEY (cust_id);
 ALTER TABLE foo_index ADD INDEX `idx_b_a` (`b`, `a`);
+ALTER TABLE foo_index DROP INDEX `idx_b_a`;
