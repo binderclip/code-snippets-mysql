@@ -16,3 +16,9 @@ select NOW(); -- 2019-02-19 08:54:53
 select DATE(NOW()); -- 2019-02-19
 select TIME(NOW()); -- 09:07:48
 select HOUR(NOW()); -- 9
+
+SELECT WEEKDAY("2019-02-18"); -- 0 周一
+SELECT WEEKDAY("2019-02-17"); -- 6 周日
+
+SELECT DAYOFWEEK("2019-02-17"); -- 1 周日
+SELECT DAYOFWEEK("2019-02-16"); -- 7 周六
