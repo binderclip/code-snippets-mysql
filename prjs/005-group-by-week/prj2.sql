@@ -7,16 +7,16 @@ CREATE TABLE yourtable
 INSERT INTO yourtable
     (`dt`, `n`)
 VALUES
-    ('2019-03-07 17:19:33', 5),
+    ('2018-12-07 17:19:33', 5),
     ('2019-03-13 17:19:33', 10),
     ('2019-03-17 17:19:33', 12);
 
 select
-    FROM_DAYS(TO_DAYS(dt) -MOD(TO_DAYS(dt) -2, 7)) as monday,
+    date_add(date_add(LAST_DAY(dt), interval 1 DAY), interval -1 MONTH) AS month_first_day,
     sum(n)
 from yourtable
-group by monday;
+group by month_first_day;
 
-/* monday    sum(n)
-2019-03-04    5
-2019-03-11    22 */
+/* month_first_day    sum(n)
+2018-12-01    5
+2019-03-01    22 */
