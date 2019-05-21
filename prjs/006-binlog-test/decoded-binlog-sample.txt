@@ -1,0 +1,181 @@
+/*!50530 SET @@SESSION.PSEUDO_SLAVE_MODE=1*/;
+/*!50003 SET @OLD_COMPLETION_TYPE=@@COMPLETION_TYPE,COMPLETION_TYPE=0*/;
+DELIMITER /*!*/;
+# at 4
+#190521 22:03:48 server id 1  end_log_pos 123 CRC32 0x9a9ea66e 	Start: binlog v 4, server v 5.7.25-28-log created 190521 22:03:48 at startup
+# Warning: this binlog is either in use or was not closed properly.
+ROLLBACK/*!*/;
+# at 123
+#190521 22:03:48 server id 1  end_log_pos 154 CRC32 0xc13e82af 	Previous-GTIDs
+# [empty]
+# at 154
+#190521 22:04:29 server id 1  end_log_pos 219 CRC32 0x0d9a1701 	Anonymous_GTID	last_committed=0	sequence_number=1	rbr_only=no	original_committed_timestamp=0	immediate_commit_timestamp=0	transaction_length=0
+# original_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+# immediate_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+/*!80001 SET @@session.original_commit_timestamp=0*//*!*/;
+/*!80014 SET @@session.original_server_version=0*//*!*/;
+/*!80014 SET @@session.immediate_server_version=0*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 219
+#190521 22:04:29 server id 1  end_log_pos 322 CRC32 0x53f563a6 	Query	thread_id=2	exec_time=0	error_code=0
+SET TIMESTAMP=1558447469/*!*/;
+SET @@session.pseudo_thread_id=2/*!*/;
+SET @@session.foreign_key_checks=1, @@session.sql_auto_is_null=0, @@session.unique_checks=1, @@session.autocommit=1/*!*/;
+SET @@session.sql_mode=1436549152/*!80005 &~0x1003ff00*//*!*/;
+SET @@session.auto_increment_increment=1, @@session.auto_increment_offset=1/*!*/;
+/*!\C latin1 *//*!*/;
+SET @@session.character_set_client=8,@@session.collation_connection=8,@@session.collation_server=8/*!*/;
+SET @@session.lc_time_names=0/*!*/;
+SET @@session.collation_database=DEFAULT/*!*/;
+create database cool_db
+/*!*/;
+# at 322
+#190521 22:04:58 server id 1  end_log_pos 387 CRC32 0x41c63b9d 	Anonymous_GTID	last_committed=1	sequence_number=2	rbr_only=no	original_committed_timestamp=0	immediate_commit_timestamp=0	transaction_length=0
+# original_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+# immediate_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+/*!80001 SET @@session.original_commit_timestamp=0*//*!*/;
+/*!80014 SET @@session.original_server_version=0*//*!*/;
+/*!80014 SET @@session.immediate_server_version=0*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 387
+#190521 22:04:58 server id 1  end_log_pos 599 CRC32 0x0a5d5757 	Query	thread_id=2	exec_time=0	error_code=0
+use `cool_db`/*!*/;
+SET TIMESTAMP=1558447498/*!*/;
+CREATE TABLE cool_table
+(
+    id INT(10) UNSIGNED NOT NULL auto_increment,
+    v INT(10) UNSIGNED NOT NULL,
+    PRIMARY KEY (`id`)
+)
+/*!*/;
+# at 599
+#190521 22:04:58 server id 1  end_log_pos 664 CRC32 0xa3c68237 	Anonymous_GTID	last_committed=2	sequence_number=3	rbr_only=yes	original_committed_timestamp=0	immediate_commit_timestamp=0	transaction_length=0
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+# original_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+# immediate_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+/*!80001 SET @@session.original_commit_timestamp=0*//*!*/;
+/*!80014 SET @@session.original_server_version=0*//*!*/;
+/*!80014 SET @@session.immediate_server_version=0*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 664
+#190521 22:04:58 server id 1  end_log_pos 739 CRC32 0x3c591f9a 	Query	thread_id=2	exec_time=0	error_code=0
+SET TIMESTAMP=1558447498/*!*/;
+BEGIN
+/*!*/;
+# at 739
+#190521 22:04:58 server id 1  end_log_pos 796 CRC32 0x4984f8cc 	Table_map: `cool_db`.`cool_table` mapped to number 108
+# at 796
+#190521 22:04:58 server id 1  end_log_pos 867 CRC32 0x1daa3137 	Write_rows: table id 108 flags: STMT_END_F
+### INSERT INTO `cool_db`.`cool_table`
+### SET
+###   @1=1
+###   @2=1
+### INSERT INTO `cool_db`.`cool_table`
+### SET
+###   @1=2
+###   @2=2
+### INSERT INTO `cool_db`.`cool_table`
+### SET
+###   @1=3
+###   @2=3
+### INSERT INTO `cool_db`.`cool_table`
+### SET
+###   @1=4
+###   @2=4
+# at 867
+#190521 22:04:58 server id 1  end_log_pos 898 CRC32 0x69e61a28 	Xid = 10
+COMMIT/*!*/;
+# at 898
+#190521 22:04:58 server id 1  end_log_pos 963 CRC32 0x1f408614 	Anonymous_GTID	last_committed=3	sequence_number=4	rbr_only=yes	original_committed_timestamp=0	immediate_commit_timestamp=0	transaction_length=0
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+# original_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+# immediate_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+/*!80001 SET @@session.original_commit_timestamp=0*//*!*/;
+/*!80014 SET @@session.original_server_version=0*//*!*/;
+/*!80014 SET @@session.immediate_server_version=0*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 963
+#190521 22:04:58 server id 1  end_log_pos 1038 CRC32 0x0a74b7c0 	Query	thread_id=2	exec_time=0	error_code=0
+SET TIMESTAMP=1558447498/*!*/;
+BEGIN
+/*!*/;
+# at 1038
+#190521 22:04:58 server id 1  end_log_pos 1095 CRC32 0xba1cfd21 	Table_map: `cool_db`.`cool_table` mapped to number 108
+# at 1095
+#190521 22:04:58 server id 1  end_log_pos 1167 CRC32 0xe0c99e58 	Update_rows: table id 108 flags: STMT_END_F
+### UPDATE `cool_db`.`cool_table`
+### WHERE
+###   @1=3
+###   @2=3
+### SET
+###   @1=3
+###   @2=4
+### UPDATE `cool_db`.`cool_table`
+### WHERE
+###   @1=4
+###   @2=4
+### SET
+###   @1=4
+###   @2=5
+# at 1167
+#190521 22:04:58 server id 1  end_log_pos 1198 CRC32 0x356bfc02 	Xid = 12
+COMMIT/*!*/;
+# at 1198
+#190521 22:04:58 server id 1  end_log_pos 1263 CRC32 0xf0cd19d0 	Anonymous_GTID	last_committed=4	sequence_number=5	rbr_only=yes	original_committed_timestamp=0	immediate_commit_timestamp=0	transaction_length=0
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+# original_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+# immediate_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+/*!80001 SET @@session.original_commit_timestamp=0*//*!*/;
+/*!80014 SET @@session.original_server_version=0*//*!*/;
+/*!80014 SET @@session.immediate_server_version=0*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 1263
+#190521 22:04:58 server id 1  end_log_pos 1338 CRC32 0x7b486873 	Query	thread_id=2	exec_time=0	error_code=0
+SET TIMESTAMP=1558447498/*!*/;
+BEGIN
+/*!*/;
+# at 1338
+#190521 22:04:58 server id 1  end_log_pos 1395 CRC32 0xe24cb714 	Table_map: `cool_db`.`cool_table` mapped to number 108
+# at 1395
+#190521 22:04:58 server id 1  end_log_pos 1439 CRC32 0xaf0c1074 	Write_rows: table id 108 flags: STMT_END_F
+### INSERT INTO `cool_db`.`cool_table`
+### SET
+###   @1=5
+###   @2=10
+# at 1439
+#190521 22:04:58 server id 1  end_log_pos 1470 CRC32 0x42e51975 	Xid = 13
+COMMIT/*!*/;
+# at 1470
+#190521 22:04:58 server id 1  end_log_pos 1535 CRC32 0xd4af4585 	Anonymous_GTID	last_committed=5	sequence_number=6	rbr_only=yes	original_committed_timestamp=0	immediate_commit_timestamp=0	transaction_length=0
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+# original_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+# immediate_commit_timestamp=0 (1970-01-01 08:00:00.000000 CST)
+/*!80001 SET @@session.original_commit_timestamp=0*//*!*/;
+/*!80014 SET @@session.original_server_version=0*//*!*/;
+/*!80014 SET @@session.immediate_server_version=0*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 1535
+#190521 22:04:58 server id 1  end_log_pos 1610 CRC32 0xcd669f9c 	Query	thread_id=2	exec_time=0	error_code=0
+SET TIMESTAMP=1558447498/*!*/;
+BEGIN
+/*!*/;
+# at 1610
+#190521 22:04:58 server id 1  end_log_pos 1667 CRC32 0x580dac22 	Table_map: `cool_db`.`cool_table` mapped to number 108
+# at 1667
+#190521 22:04:58 server id 1  end_log_pos 1720 CRC32 0xd25d9f97 	Delete_rows: table id 108 flags: STMT_END_F
+### DELETE FROM `cool_db`.`cool_table`
+### WHERE
+###   @1=1
+###   @2=1
+### DELETE FROM `cool_db`.`cool_table`
+### WHERE
+###   @1=2
+###   @2=2
+# at 1720
+#190521 22:04:58 server id 1  end_log_pos 1751 CRC32 0x532b0231 	Xid = 14
+COMMIT/*!*/;
+SET @@SESSION.GTID_NEXT= 'AUTOMATIC' /* added by mysqlbinlog */ /*!*/;
+DELIMITER ;
+# End of log file
+/*!50003 SET COMPLETION_TYPE=@OLD_COMPLETION_TYPE*/;
+/*!50530 SET @@SESSION.PSEUDO_SLAVE_MODE=0*/;
