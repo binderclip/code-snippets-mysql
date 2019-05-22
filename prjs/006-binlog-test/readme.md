@@ -1,7 +1,7 @@
 # readme
 
 ```shell
-$ cat /Users/zhoubokun/docker/percona/cnf/my.cnf
+$ cat ~/docker/percona/cnf/my.cnf
 [mysqld]
 server-id=1
 binlog_format=ROW
@@ -10,9 +10,9 @@ log-bin=mysql-bin
 
 ```shell
 docker run --name masterdb \
-    -v /Users/zhoubokun/docker/percona/cnf:/etc/my.cnf.d \
-    -v /Users/zhoubokun/docker/percona/data:/var/lib/mysql \
-    -v /Users/zhoubokun/docker/percona/log:/var/log/mysql \
+    -v ~/docker/percona/cnf:/etc/my.cnf.d \
+    -v ~/docker/percona/data:/var/lib/mysql \
+    -v ~/docker/percona/log:/var/log/mysql \
     -p 33306:3306\
     -e MYSQL_ROOT_PASSWORD=root -d percona
 ```
