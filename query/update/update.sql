@@ -19,3 +19,8 @@ UPDATE Customers
     SET cust_email = NULL
 WHERE
     cust_id = '1000000005';
+
+
+-- bit update
+UPDATE users SET permission = permission | 16;
+-- https://stackoverflow.com/questions/12928736/update-specific-bit-in-integer-column
