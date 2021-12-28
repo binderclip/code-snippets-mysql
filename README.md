@@ -2,6 +2,7 @@
 
 ```mysql
 mysql -h hostname -u user database --protocol=tcp < path/to/test.sql
+mysql -u <username> -h <hostname> -P <port> <database> -p
 ```
 
 ## tools
